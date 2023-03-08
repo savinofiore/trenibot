@@ -52,7 +52,7 @@ const main = async () => {
         await sendMessage(msg.chat.id, "Benvenuto nel bot dei prezzi dei treni! Per iniziare, inviami il tuo luogo di partenza e di arrivo nel formato: /start Roma Milano");
       });
   
-      bot.onText(/\/start (.+) (.+)/, async (msg, match) => {
+      bot.onText(/\/trova (.+) (.+)/, async (msg, match) => {
         const origin = match[1];
         const destination = match[2];
         const price = await getTrainPrices(origin, destination);
